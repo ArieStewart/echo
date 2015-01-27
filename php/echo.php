@@ -1,10 +1,18 @@
 <?php
 
-function echo()
+function echoA()
 {
-  // ...
+  $sent = func_get_args();
+
+  foreach ($sent as $value) 
+  {
+  	echo $value."<br>";
+  }
+  echo "<br>";
 }
 
-echo();
-echo('bla');
-echo('foo', 'bar', 'baz');
+echoA();
+
+echoA('bla');
+
+echoA('foo', 'bar', 'baz');
